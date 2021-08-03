@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Edward Coding Task</string>
+    <string name="str_home">Home</string>
+    <string name="str_details">Details</string>
+    <string name="str_username">Username</string>
+    <string name="str_email">Email</string>
+    <string name="str_following">Following</string>
+    <string name="str_collection">Collection</string>
+    <string name="str_followers">Followers</string>
+    <string name="str_content_description">Content Description</string>
+</resources>

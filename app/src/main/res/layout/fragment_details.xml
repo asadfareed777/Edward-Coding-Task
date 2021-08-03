@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/str_content_description" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        android:layout_marginHorizontal="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_username"
+                android:textColor="@color/colorBlack"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_following_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="233"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_marginTop="16dp"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_follower_count"
+                app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+            <TextView
+                android:id="@+id/tv_follower_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="23"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/tv_following_count"
+                app:layout_constraintEnd_toStartOf="@id/tv_collection_count"
+                app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+            <TextView
+                android:id="@+id/tv_collection_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="23"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/tv_follower_count"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+            <TextView
+                android:id="@+id/tv_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_following"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/tv_following_count"
+                app:layout_constraintEnd_toEndOf="@id/tv_following_count"
+                app:layout_constraintTop_toBottomOf="@id/tv_following_count" />
+
+            <TextView
+                android:id="@+id/tv_follower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_followers"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/tv_follower_count"
+                app:layout_constraintEnd_toEndOf="@id/tv_follower_count"
+                app:layout_constraintTop_toBottomOf="@id/tv_follower_count" />
+
+            <TextView
+                android:id="@+id/tv_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_collection"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/tv_collection_count"
+                app:layout_constraintEnd_toEndOf="@id/tv_collection_count"
+                app:layout_constraintTop_toBottomOf="@id/tv_collection_count"  />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorRed"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_following"/>
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="asad@gmail.com"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_marginStart="16dp"
+                app:drawableStartCompat="@drawable/ic_email"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="+93456712345"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:drawableStartCompat="@drawable/ic_phone"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                app:layout_constraintStart_toStartOf="@id/tv_email"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <TextView
+                android:id="@+id/tv_webiste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="https:\\www.example.com"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:drawableStartCompat="@drawable/ic_link"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                app:layout_constraintStart_toStartOf="@id/tv_phone"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
